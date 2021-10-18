@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Shrikhand';
-    src: url(./polices/Shrikhand-Regular.otf);
+    src: url(./polices/Shrikhand-Regular.ttf);
 }
 
 /* Police Sous-titre */
@@ -19,14 +19,36 @@
     src: url(./polices/Roboto-Regular.ttf);
 }
 
+/* Autres */
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url(./polices/Roboto-Light.ttf);
+}
+
 /* Affectations */
 
 h1 {
     font-family: 'Shrikhand';
+    font-size: 25px;
+    letter-spacing: 1px;
 }
 
 h2 {
     font-family: 'Roboto-Black';
+}
+
+h3 {
+    font-family: 'Roboto-Regular';
+    font-size: 15px;
+}
+
+h4 {
+    font-family: 'Shrikhand';
+}
+
+h5 {
+    font-family: 'Roboto-Light';
 }
 
 p {

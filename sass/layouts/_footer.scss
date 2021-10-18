@@ -1,0 +1,37 @@
+/* Footer */
+
+footer {
+    width: 100%;
+    background-color: #353535;
+    box-sizing: border-box;
+    padding: 20px;
+    > .footer__titre {
+        color: white;
+        letter-spacing: 1px;
+        > h4 {
+            margin-top: 0px;
+        }
+    }
+    > nav {
+        color: white;
+        > ul {
+            padding: 0px;
+            > li {
+                list-style-type: none;
+                > a > h5 {
+                    margin-top: 0px;
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    > .fa-utensils {
+                        margin-right: 10px;
+                    }
+                    > .fa-handshake-angle {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+

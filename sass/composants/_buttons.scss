@@ -8,5 +8,5 @@ button {
     color: white;
     font-family: 'Roboto-Regular';
     font-size: 15px;
-    background-image: linear-gradient(rgba(255,121,218,1), rgba(147,86,220,1));
+    background-image: linear-gradient($second, $primary);
 }
