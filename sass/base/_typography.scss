@@ -1,0 +1,35 @@
+/* Police Titre */
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url(./polices/Shrikhand-Regular.otf);
+}
+
+/* Police Sous-titre */
+
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url(./polices/Roboto-Black.ttf);
+}
+
+/* Police Texte */
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(./polices/Roboto-Regular.ttf);
+}
+
+/* Affectations */
+
+h1 {
+    font-family: 'Shrikhand';
+}
+
+h2 {
+    font-family: 'Roboto-Black';
+}
+
+p {
+    font-family: 'Roboto-Regular';
+    color: rgb(80, 80, 80);
+}
