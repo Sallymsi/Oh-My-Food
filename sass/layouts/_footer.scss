@@ -18,20 +18,23 @@ footer {
             padding: 0px;
             > li {
                 list-style-type: none;
-                > a > h5 {
-                    margin-top: 0px;
-                    margin-bottom: 8px;
-                    font-size: 14px;
-                    letter-spacing: 1px;
-                    > .fa-utensils {
-                        margin-right: 10px;
-                    }
-                    > .fa-handshake-angle {
-                        margin-right: 5px;
+                > a {
+                    text-decoration: none;
+                    color: white;
+                    > h5 {
+                        margin-top: 0px;
+                        margin-bottom: 8px;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        > .fa-utensils {
+                            margin-right: 10px;
+                        }
+                        > .fa-handshake-angle {
+                            margin-right: 5px;
+                        }
                     }
                 }
             }
         }
     }
 }
-

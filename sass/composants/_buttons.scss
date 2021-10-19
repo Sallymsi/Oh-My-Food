@@ -9,4 +9,8 @@ button {
     font-family: 'Roboto-Regular';
     font-size: 15px;
     background-image: linear-gradient($second, $primary);
+    box-shadow: 3px 3px 15px #a5a5a5;
+    &:hover {
+        animation: button-on 1s forwards;
+    }
 }

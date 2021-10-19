@@ -1,0 +1,119 @@
+.pop-up {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 220px;
+    left: 70px;
+    width: 60%;
+    height: 180px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px grey;
+    z-index: -1;
+    animation: test 4s;
+    animation-iteration-count: 1;
+    > div {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 10px solid $silver;
+        border-top-color: $second;
+        border-bottom-color: $second;
+        animation: charge 3s linear infinite;
+
+    }
+    > h1 {
+        font-size: 20px;
+        color: black;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+}
+
+@keyframes test {
+    100% {
+        z-index: 2;
+    }
+}
+
+@keyframes charge {
+    0% {
+        transform: rotate(0deg);
+        border-top-color: $second;
+        border-bottom-color: $second;
+    }
+    50% {
+        transform: rotate(360deg);
+        border-top-color: $primary;
+        border-bottom-color: $primary;
+    }
+    100% {
+        transform: rotate(720deg);
+        border-top-color: $second;
+        border-bottom-color: $second;
+    }
+}
+
+@keyframes cascade {
+    0% {
+        transform: translate(-380px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+
+@keyframes check {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 20%;
+    }
+}
+
+@keyframes texto {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 80%;
+        padding-right: 35px;
+    }
+}
+
+@keyframes decalage {
+    0% {
+        transform: translate(0px);
+    }
+    100% {
+        transform: translate(-50px);
+    }
+}
+@keyframes visible {
+    0% {
+        opacity: 0;
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes button-on {
+    0% {
+        box-shadow: 3px 3px 15px #a5a5a5;
+        background-image: linear-gradient($second, $primary);
+    }
+    50% {
+        box-shadow: 4px 4px 12px #a5a5a5;
+    }
+    100% {
+        box-shadow: 5px 5px 10px #a5a5a5;
+        background-image: linear-gradient(#f884d7, #a073d8);
+        transform: scale(1.1);
+    }
+}
