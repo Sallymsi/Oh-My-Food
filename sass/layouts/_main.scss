@@ -60,6 +60,7 @@
             align-items: center;
             width: 95%;
             height: 70px;
+            position: relative;
             border-radius: 20px;
             background-color: $grey;
             box-shadow: 4px 4px 8px $silver;
@@ -71,7 +72,7 @@
             }
             > div {
                 position: absolute;
-                left: 16px;
+                left: -15px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -161,7 +162,14 @@
                     right: 25px;
                     bottom: 25px;
                     font-size: 23px;
-                    color: black;
+                }
+                > .fa-solid {
+                    opacity: 0;
+                    color: $primary;                  
+                    &:hover {
+                        transform-origin: bottom;
+                        animation: bigger 1s forwards;
+                    }
                 }
             }
         }
@@ -177,9 +185,11 @@
 .menu__image {
     box-sizing: border-box;
     width: 100%;
+    height: 50vh;
     overflow: hidden;
     > img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
         transform: scale(1.1);
     }
@@ -205,6 +215,14 @@
         top: 30px;
         right: 40px;
         font-size: 25px;
+    }
+    > .fa-solid {
+        opacity: 0;
+        color: $primary;                  
+        &:hover {
+            transform-origin: bottom;
+            animation: bigger 1s forwards;
+        }
     }
     > button {
         width: 50%;
@@ -246,6 +264,7 @@
             box-shadow: 4px 4px 8px $silver;
             width: 100%;
             height: 100%;
+            opacity: 0;
             overflow: hidden;
             display: flex;
             flex-direction: row;
@@ -282,13 +301,6 @@
             &:hover > .repas__menu-type-text {
                 animation: texto 1s forwards;
             }
-            &:hover > span {
-                animation: decalage 1s forwards;
-            }
-            &:hover > .animation-check > i {                
-                animation: visible 1s forwards;
-                animation-delay: 0.1s;
-            }
             > span {
                 position: absolute;
                 bottom: 12px;
@@ -297,6 +309,13 @@
                     font-size: 14px;
                     margin: 0px;
                 }
+            }
+            &:hover > span {
+                animation: decalage 1s forwards;
+            }
+            &:hover > .animation-check > i {                
+                animation: visible 1s forwards;
+                animation-delay: 0.1s;
             }
             &:first-child {
                 animation: cascade 1s linear;

@@ -5,14 +5,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 220px;
-  left: 70px;
+  top: 40%;
+  left: 20%;
   width: 60%;
   height: 180px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 4px 4px 10px grey;
-  z-index: -1;
+  opacity: 0;
+  z-index: -2;
   animation: test 4s;
   animation-iteration-count: 1;
 }
@@ -33,7 +34,12 @@
 }
 
 @keyframes test {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
   100% {
+    opacity: 1;
     z-index: 2;
   }
 }
@@ -60,6 +66,7 @@
   }
   100% {
     transform: translate(0px);
+    opacity: 1;
   }
 }
 @keyframes check {
@@ -87,6 +94,22 @@
     transform: translate(-50px);
   }
 }
+@keyframes decalageT {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(-130px);
+  }
+}
+@keyframes decalageD {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(-240px);
+  }
+}
 @keyframes visible {
   0% {
     opacity: 0;
@@ -109,6 +132,16 @@
     box-shadow: 5px 5px 10px #a5a5a5;
     background-image: linear-gradient(#f884d7, #a073d8);
     transform: scale(1.1);
+  }
+}
+@keyframes bigger {
+  0% {
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
   }
 }
 body {
@@ -155,6 +188,7 @@ h3 {
 
 h4 {
   font-family: "Shrikhand";
+  font-weight: normal;
 }
 
 h5 {
@@ -273,6 +307,7 @@ header > a > i {
   align-items: center;
   width: 95%;
   height: 70px;
+  position: relative;
   border-radius: 20px;
   background-color: #F6F6F6;
   box-shadow: 4px 4px 8px #EAEAEA;
@@ -285,7 +320,7 @@ header > a > i {
 }
 .working__case-choice > div {
   position: absolute;
-  left: 16px;
+  left: -15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -375,7 +410,14 @@ header > a > i {
   right: 25px;
   bottom: 25px;
   font-size: 23px;
-  color: black;
+}
+.restaurant__case-choice-text > .fa-solid {
+  opacity: 0;
+  color: #9356DC;
+}
+.restaurant__case-choice-text > .fa-solid:hover {
+  transform-origin: bottom;
+  animation: bigger 1s forwards;
 }
 
 /* Menu */
@@ -386,10 +428,12 @@ header > a > i {
 .menu__image {
   box-sizing: border-box;
   width: 100%;
+  height: 50vh;
   overflow: hidden;
 }
 .menu__image > img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   transform: scale(1.1);
 }
@@ -415,6 +459,14 @@ header > a > i {
   top: 30px;
   right: 40px;
   font-size: 25px;
+}
+.carte__menu > .fa-solid {
+  opacity: 0;
+  color: #9356DC;
+}
+.carte__menu > .fa-solid:hover {
+  transform-origin: bottom;
+  animation: bigger 1s forwards;
 }
 .carte__menu > button {
   width: 50%;
@@ -457,6 +509,7 @@ header > a > i {
   box-shadow: 4px 4px 8px #EAEAEA;
   width: 100%;
   height: 100%;
+  opacity: 0;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -494,13 +547,6 @@ header > a > i {
 .repas__menu-type:hover > .repas__menu-type-text {
   animation: texto 1s forwards;
 }
-.repas__menu-type:hover > span {
-  animation: decalage 1s forwards;
-}
-.repas__menu-type:hover > .animation-check > i {
-  animation: visible 1s forwards;
-  animation-delay: 0.1s;
-}
 .repas__menu-type > span {
   position: absolute;
   bottom: 12px;
@@ -509,6 +555,13 @@ header > a > i {
 .repas__menu-type > span > h3 {
   font-size: 14px;
   margin: 0px;
+}
+.repas__menu-type:hover > span {
+  animation: decalage 1s forwards;
+}
+.repas__menu-type:hover > .animation-check > i {
+  animation: visible 1s forwards;
+  animation-delay: 0.1s;
 }
 .repas__menu-type:first-child {
   animation: cascade 1s linear;
@@ -556,7 +609,6 @@ footer {
 }
 footer > .footer__titre {
   color: white;
-  letter-spacing: 1px;
 }
 footer > .footer__titre > h4 {
   margin-top: 0px;
@@ -585,6 +637,54 @@ footer > nav > ul > li > a > h5 > .fa-utensils {
 }
 footer > nav > ul > li > a > h5 > .fa-handshake-angle {
   margin-right: 5px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  header > img {
+    margin-top: 10px;
+    width: 35%;
+  }
+
+  .repas__menu-type:hover > span {
+    animation: decalageT 1s forwards;
+  }
+}
+@media screen and (min-width: 993px) {
+  header {
+    height: 70px;
+  }
+  header > img {
+    margin-top: 10px;
+    width: 16%;
+  }
+
+  .carte__menu {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .working {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .restaurant {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .repas__menu-type:hover > span {
+    animation: decalageD 1s forwards;
+  }
+
+  footer {
+    padding-left: 300px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

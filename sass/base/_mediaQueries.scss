@@ -1,0 +1,52 @@
+@media screen and (min-width: 768px) and (max-width: 992px)
+{
+    header > img 
+    {
+        margin-top: 10px;
+        width: 35%;
+    }
+
+    .repas__menu-type:hover > span {
+        animation: decalageT 1s forwards;
+    }
+}
+
+@media screen and (min-width: 993px)
+{
+    header {
+        height: 70px;
+        > img {
+            margin-top: 10px;
+            width: 16%;
+        }
+    }
+
+    .carte__menu {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .working {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .restaurant {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .repas__menu-type:hover > span {
+        animation: decalageD 1s forwards;
+    }
+
+    footer {
+        padding-left: 300px;
+    }
+
+}
