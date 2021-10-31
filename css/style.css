@@ -646,6 +646,7 @@ footer > nav > ul > li > a > h5 > .fa-handshake-angle {
   margin-right: 5px;
 }
 
+/* Tablette */
 @media screen and (min-width: 768px) and (max-width: 992px) {
   header > img {
     margin-top: 10px;
@@ -656,6 +657,7 @@ footer > nav > ul > li > a > h5 > .fa-handshake-angle {
     animation: decalageT 1s forwards;
   }
 }
+/* Desktop */
 @media screen and (min-width: 993px) {
   header {
     height: 70px;

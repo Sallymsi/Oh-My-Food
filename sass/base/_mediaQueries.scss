@@ -1,3 +1,5 @@
+/* Tablette */
+
 @media screen and (min-width: 768px) and (max-width: 992px)
 {
     header > img 
@@ -10,6 +12,8 @@
         animation: decalageT 1s forwards;
     }
 }
+
+/* Desktop */
 
 @media screen and (min-width: 993px)
 {
