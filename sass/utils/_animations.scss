@@ -1,3 +1,5 @@
+/* Loading Spinner */
+
 .pop-up {
     position: fixed;
     display: flex;
@@ -13,7 +15,7 @@
     box-shadow: 4px 4px 10px grey;
     opacity: 0;
     z-index: -2;
-    animation: test 4s;
+    animation: plan 4s;
     animation-iteration-count: 1;
     > div {
         width: 80px;
@@ -33,7 +35,7 @@
     }
 }
 
-@keyframes test {
+@keyframes plan {
     0% {
         opacity: 1;
         z-index: 2;
@@ -63,6 +65,8 @@
     }
 }
 
+/* Animation Cascade Menu */
+
 @keyframes cascade {
     0% {
         transform: translate(-380px);
@@ -72,6 +76,8 @@
         opacity: 1;
     }
 }
+
+/* Animation Selection */
 
 @keyframes check {
     0% {
@@ -91,6 +97,8 @@
         padding-right: 35px;
     }
 }
+
+/* Décalage prix */
 
 @keyframes decalage {
     0% {
@@ -119,8 +127,7 @@
     }
 }
 
-
-
+/* Rotation Check */
 
 @keyframes visible {
     0% {
@@ -132,6 +139,8 @@
         opacity: 1;
     }
 }
+
+/* Animation Bouton */
 
 @keyframes button-on {
     0% {
@@ -148,7 +157,9 @@
     }
 }
 
-@keyframes bigger {
+/* Coeur */
+
+@keyframes heart {
     0% {
         transform: scaleY(0);
         opacity: 1;
