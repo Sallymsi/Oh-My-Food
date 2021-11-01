@@ -207,6 +207,12 @@ p {
   color: #505050;
 }
 
+span {
+  font-family: "Roboto-Regular";
+  font-size: 14px;
+  font-weight: 700;
+}
+
 button {
   height: 50px;
   border-radius: 30px;
