@@ -7,10 +7,6 @@
         margin-top: 10px;
         width: 35%;
     }
-
-    .repas__menu-type:hover > span {
-        animation: decalageT 1s forwards;
-    }
 }
 
 /* Desktop */
@@ -43,10 +39,13 @@
         margin-right: auto;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-    }
-
-    .repas__menu-type:hover > span {
-        animation: decalageD 1s forwards;
+        &__case {
+            flex-direction: row;
+            justify-content: space-between;
+            &-block {
+                width: 48%;
+            }
+        }
     }
 
     footer {

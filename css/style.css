@@ -6,16 +6,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 40%;
-  left: 20%;
-  width: 60%;
-  height: 180px;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
   background-color: white;
   border-radius: 20px;
   box-shadow: 4px 4px 10px grey;
   opacity: 0;
   z-index: -2;
-  animation: plan 4s;
+  animation: plan 3s;
   animation-iteration-count: 1;
 }
 .pop-up > div {
@@ -89,31 +89,6 @@
     padding-right: 35px;
   }
 }
-/* Décalage prix */
-@keyframes decalage {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translate(-50px);
-  }
-}
-@keyframes decalageT {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translate(-130px);
-  }
-}
-@keyframes decalageD {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translate(-240px);
-  }
-}
 /* Rotation Check */
 @keyframes visible {
   0% {
@@ -138,17 +113,6 @@
     box-shadow: 5px 5px 10px #a5a5a5;
     background-image: linear-gradient(#f884d7, #a073d8);
     transform: scale(1.1);
-  }
-}
-/* Coeur */
-@keyframes heart {
-  0% {
-    transform: scaleY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scaleY(1);
-    opacity: 1;
   }
 }
 body {
@@ -331,6 +295,9 @@ header > a > i {
   font-size: 20px;
   color: #505050;
 }
+.working__case-choice > .fa-store {
+  color: #9356DC;
+}
 .working__case-choice > div {
   position: absolute;
   left: -15px;
@@ -362,7 +329,11 @@ header > a > i {
   justify-content: space-around;
   width: 100%;
 }
-.restaurant__case > a {
+.restaurant__case-block {
+  display: flex;
+  flex-direction: column;
+}
+.restaurant__case-block > a {
   text-decoration: none;
   color: black;
 }
@@ -433,6 +404,32 @@ header > a > i {
   animation: bigger 1s forwards;
 }
 
+.heart {
+  width: 30px;
+  stroke-width: 40;
+  stroke: black;
+  fill: white;
+  cursor: pointer;
+}
+.heart-full {
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  fill: url(#text-fill);
+  stroke: none;
+}
+.heart-empty {
+  width: 30px;
+  right: 30px;
+  top: 25px;
+  position: absolute;
+}
+.heart-empty:hover {
+  opacity: 0;
+  transition: 0.5s;
+  transition: 0.5s;
+}
+
 /* Menu */
 .menu {
   background-color: #F6F6F6;
@@ -463,28 +460,47 @@ header > a > i {
   position: relative;
   top: -45px;
 }
-.carte__menu > h1 {
-  margin-top: 5px;
+.carte__menu-titre {
+  display: flex;
+  justify-content: space-between;
+}
+.carte__menu-titre > h1 {
+  margin-top: 15px;
   padding-left: 5px;
 }
-.carte__menu > i {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 25px;
-}
-.carte__menu > .fa-solid {
-  opacity: 0;
-  color: #9356DC;
-}
-.carte__menu > .fa-solid:hover {
-  transform-origin: bottom;
-  animation: heart 1s forwards;
+.carte__menu-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: 25px;
 }
 .carte__menu > button {
   width: 50%;
   margin: 30px auto 0px;
   box-shadow: 3px 3px 15px #a5a5a5;
+}
+
+.heartM {
+  width: 30px;
+  stroke-width: 40;
+  stroke: black;
+  fill: white;
+  cursor: pointer;
+}
+.heartM-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+}
+.heartM-empty {
+  position: relative;
+  width: 30px;
+}
+.heartM-empty:hover {
+  opacity: 0;
+  transition: 0.5s;
+  transition: 0.5s;
 }
 
 .repas {
@@ -535,7 +551,9 @@ header > a > i {
   width: 100%;
   height: 100%;
   padding: 12px;
+  padding-right: 45px;
   white-space: nowrap;
+  position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -554,20 +572,20 @@ header > a > i {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.repas__menu-type-text > span {
+  position: absolute;
+  bottom: 12px;
+  right: 15px;
+}
+.repas__menu-type-text > span > h3 {
+  font-size: 14px;
+  margin: 0px;
+}
 .repas__menu-type:hover > .animation-check {
   animation: check 1s forwards;
 }
 .repas__menu-type:hover > .repas__menu-type-text {
   animation: texto 1s forwards;
-}
-.repas__menu-type > span {
-  position: absolute;
-  bottom: 12px;
-  right: 20px;
-}
-.repas__menu-type > span > h3 {
-  font-size: 14px;
-  margin: 0px;
 }
 .repas__menu-type:hover > span {
   animation: decalage 1s forwards;
@@ -609,7 +627,7 @@ header > a > i {
 .animation-check > i {
   opacity: 0;
   font-size: 25px;
-  color: #17a17f;
+  color: white;
   transform: rotate(180deg);
 }
 
@@ -658,10 +676,6 @@ footer > nav > ul > li > a > h5 > .fa-handshake-angle {
     margin-top: 10px;
     width: 35%;
   }
-
-  .repas__menu-type:hover > span {
-    animation: decalageT 1s forwards;
-  }
 }
 /* Desktop */
 @media screen and (min-width: 993px) {
@@ -692,9 +706,12 @@ footer > nav > ul > li > a > h5 > .fa-handshake-angle {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
-
-  .repas__menu-type:hover > span {
-    animation: decalageD 1s forwards;
+  .restaurant__case {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .restaurant__case-block {
+    width: 48%;
   }
 
   footer {

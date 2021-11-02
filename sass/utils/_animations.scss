@@ -6,16 +6,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 40%;
-    left: 20%;
-    width: 60%;
-    height: 180px;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
     background-color: white;
     border-radius: 20px;
     box-shadow: 4px 4px 10px grey;
     opacity: 0;
     z-index: -2;
-    animation: plan 4s;
+    animation: plan 3s;
     animation-iteration-count: 1;
     > div {
         width: 80px;
@@ -98,35 +98,6 @@
     }
 }
 
-/* Décalage prix */
-
-@keyframes decalage {
-    0% {
-        transform: translate(0px);
-    }
-    100% {
-        transform: translate(-50px);
-    }
-}
-
-@keyframes decalageT {
-    0% {
-        transform: translate(0px);
-    }
-    100% {
-        transform: translate(-130px);
-    }
-}
-
-@keyframes decalageD {
-    0% {
-        transform: translate(0px);
-    }
-    100% {
-        transform: translate(-240px);
-    }
-}
-
 /* Rotation Check */
 
 @keyframes visible {
@@ -154,18 +125,5 @@
         box-shadow: 5px 5px 10px #a5a5a5;
         background-image: linear-gradient(#f884d7, #a073d8);
         transform: scale(1.1);
-    }
-}
-
-/* Coeur */
-
-@keyframes heart {
-    0% {
-        transform: scaleY(0);
-        opacity: 1;
-    }
-    100% {
-        transform: scaleY(1);
-        opacity: 1;
     }
 }

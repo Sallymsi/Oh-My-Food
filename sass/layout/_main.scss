@@ -70,6 +70,9 @@
                 font-size: 20px;
                 color: rgb(80, 80, 80);
             }
+            > .fa-store {
+                color: $primary;
+            }
             > div {
                 position: absolute;
                 left: -15px;
@@ -103,10 +106,14 @@
         flex-direction: column;
         justify-content: space-around;
         width: 100%;
-        > a {
+        &-block {
+            display: flex;
+            flex-direction: column;
+            > a {
             text-decoration: none;
             color: black;
-        }
+            }
+        } 
         &-choice {
             display: flex;
             flex-direction: column;
@@ -176,6 +183,32 @@
     }
 }
 
+.heart {
+    width: 30px;
+    stroke-width: 40;
+    stroke: black;
+    fill: white;
+    cursor: pointer;
+    &-full {
+        position: absolute;
+        right: 30px;
+        top: 25px;
+        fill: url(#text-fill);
+        stroke: none;
+    }
+    &-empty {
+        width: 30px;
+        right: 30px;
+        top: 25px;
+        position: absolute;
+        &:hover {
+            opacity: 0;
+            transition: 0.5s;
+            transition: 0.5s;
+        }
+    }
+}
+
 /* Menu */
 
 .menu {
@@ -206,28 +239,47 @@
     border-top-right-radius: 30px;
     position: relative;
     top: -45px;
-    > h1 {
-        margin-top: 5px;
-        padding-left: 5px;
-    }
-    > i {
-        position: absolute;
-        top: 30px;
-        right: 40px;
-        font-size: 25px;
-    }
-    > .fa-solid {
-        opacity: 0;
-        color: $primary;                  
-        &:hover {
-            transform-origin: bottom;
-            animation: heart 1s forwards;
+    &-titre {
+        display: flex;
+        justify-content: space-between;
+        > h1 {
+            margin-top: 15px;
+            padding-left: 5px;
         }
+    }
+    &-heart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-right: 25px;
     }
     > button {
         width: 50%;
         margin: 30px auto 0px;
         box-shadow: 3px 3px 15px rgb(165, 165, 165);
+    }
+}
+
+.heartM {
+    width: 30px;
+    stroke-width: 40;
+    stroke: black;
+    fill: white;
+    cursor: pointer;
+    &-full {
+        position: absolute;
+        fill: url(#text-fill);
+        stroke: none;
+    }
+    &-empty {
+        position: relative;
+        width: 30px;
+        &:hover {
+            opacity: 0;
+            transition: 0.5s;
+            transition: 0.5s;
+        }
     }
 }
 
@@ -276,7 +328,9 @@
                 width: 100%;
                 height: 100%;
                 padding: 12px;
+                padding-right: 45px;
                 white-space: nowrap;
+                position: relative;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 > h3 {
@@ -294,21 +348,21 @@
                     text-overflow: ellipsis;
                     overflow: hidden;
                 }
+                > span {
+                    position: absolute;
+                    bottom: 12px;
+                    right: 15px;
+                    > h3 {
+                        font-size: 14px;
+                        margin: 0px;
+                    }
+                }
             }
             &:hover > .animation-check {
                 animation: check 1s forwards;
             }
             &:hover > .repas__menu-type-text {
                 animation: texto 1s forwards;
-            }
-            > span {
-                position: absolute;
-                bottom: 12px;
-                right: 20px;
-                > h3 {
-                    font-size: 14px;
-                    margin: 0px;
-                }
             }
             &:hover > span {
                 animation: decalage 1s forwards;
@@ -352,7 +406,7 @@
     > i {
         opacity: 0;
         font-size: 25px;
-        color: #17a17f;
+        color: white;
         transform: rotate(180deg);
     }
 }
