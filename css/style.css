@@ -27,7 +27,8 @@
   border-bottom-color: #FF79DA;
   animation: charge 3s linear infinite;
 }
-.pop-up > h1 {
+.pop-up > h3 {
+  font-family: "Shrikhand";
   font-size: 20px;
   color: black;
   margin-top: 15px;
