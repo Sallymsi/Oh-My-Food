@@ -519,7 +519,8 @@ header > a > i {
   margin-top: 15px;
   width: 100%;
 }
-.repas > h5 {
+.repas > h2 {
+  font-family: "Roboto-Light";
   font-size: 17px;
   padding-left: 5px;
   margin-top: 10px;
