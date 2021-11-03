@@ -240,10 +240,11 @@ header > a > i {
 .location__icone > i {
   color: #505050;
 }
-.location > h2 {
+.location > p {
   font-family: "Roboto-Regular";
   color: #505050;
   font-size: 15px;
+  font-weight: 600;
 }
 
 /* Réservez.. */
