@@ -371,7 +371,9 @@ header > a > i {
   border-radius: 5px;
   background-color: #99E2D0;
 }
-.restaurant__case-choice-image > div > h5 {
+.restaurant__case-choice-image > div > h3 {
+  font-family: "Roboto-Light";
+  font-size: 14px;
   margin: 5px;
   margin-left: 10px;
   margin-right: 10px;
